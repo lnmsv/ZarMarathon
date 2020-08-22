@@ -39,7 +39,7 @@ function renderProgressBar(person) {
   person.elProgressbar.style.width = person.damageHP + '%';
 }
 
-fucntion changeHP(count, person) {
+function changeHP(count, person) {
   person.damageHP -= count;
   renderHP(person);
 }
