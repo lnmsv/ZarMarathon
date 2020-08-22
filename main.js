@@ -25,3 +25,4 @@ function init() {
 function renderHPLife(person) {
   person.elHP.innerText = character.damageHP + ' / ' + character.defaultHP;
 }
+init();
