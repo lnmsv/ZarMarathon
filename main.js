@@ -24,4 +24,4 @@ function init() {
 function renderHPLife() {
   const $character = document.getElementById('health-character');
   console.log($character.innerText);
-  
+}
