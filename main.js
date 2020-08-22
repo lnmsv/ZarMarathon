@@ -32,7 +32,7 @@ function renderHP(person) {
 }
 
 function renderHPLife(person) {
-  person.elHP.innerText = character.damageHP + ' / ' + character.defaultHP;
+  person.elHP.innerText = person.damageHP + ' / ' + person.defaultHP;
 }
 
 function renderProgressBar(person) {
