@@ -5,6 +5,7 @@ const character = {
   defaultHP: 100,
   damageHP: 60,
   elHP: document.getElementById('health-character'),
+  elProgressbar: document.getElementById('progressbar-character'),
 }
 
 const enemy = {
@@ -20,9 +21,15 @@ $btn.addEventListener('click', function() {
 function init() {
   console.log('Start game');
   renderHPLife(character);
+  renderProgressBar(character);
 }
 
 function renderHPLife(person) {
   person.elHP.innerText = character.damageHP + ' / ' + character.defaultHP;
 }
+
+function renderProgressBar(person) {
+  person.elProgressbar.style.width = person.damageHP + '%';
+}
+
 init();
