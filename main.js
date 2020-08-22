@@ -16,6 +16,8 @@ const enemy = {
 
 $btn.addEventListener('click', function() {
   console.log('Kick');
+  changeHP(20, character);
+  changeHP(20, enemy);
 })
 
 function init() {
@@ -35,6 +37,11 @@ function renderHPLife(person) {
 
 function renderProgressBar(person) {
   person.elProgressbar.style.width = person.damageHP + '%';
+}
+
+fucntion changeHP(count, person) {
+  person.damageHP -= count;
+  renderHP(person);
 }
 
 init();
