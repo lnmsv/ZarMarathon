@@ -20,8 +20,13 @@ $btn.addEventListener('click', function() {
 
 function init() {
   console.log('Start game');
-  renderHPLife(character);
-  renderProgressBar(character);
+  renderHP(character);
+  renderHP(enemy);
+}
+
+function renderHP(person) {
+  renderHPLife(person);
+  renderProgressBar(person);
 }
 
 function renderHPLife(person) {
