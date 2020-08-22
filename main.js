@@ -15,3 +15,13 @@ const enemy = {
 $btn.addEventListener('click', function() {
   console.log('Kick');
 })
+
+function init() {
+  console.log('Start game');
+  renderHPLife();
+}
+
+function renderHPLife() {
+  const $character = document.getElementById('health-character');
+  console.log($character.innerText);
+  
