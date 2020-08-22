@@ -1,5 +1,22 @@
-function getRow(f, s) {
-  return f.length > s.length ? f : s;
+const firstRow = 'mama mila ramu';
+const secondRow = 'sobakaaaaaaaaa drug 4eloveka';
+
+function getRow(firstRow, secondRow) {
+  let firstResult = countedChar(firstRow, 'a');
+  let secondResult = countedChar(secondRow, 'a');
+  
+  return firstResult > secondResult ? firstRow : secondRow;
 }
 
-console.log(getRow('qwe', 'qwee')); // мама мыла раму
+function countedChar(row, char) {
+  let counted = 0;
+  
+  for (let i = 0; i < row.length; i++) {
+      if (row.charAt(i) === char) {
+          counted++;
+      }
+  }
+  return counted;
+}
+console.log(getRow(firstRow, secondRow));
+  
