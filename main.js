@@ -16,8 +16,8 @@ const enemy = {
 
 $btn.addEventListener('click', function() {
   console.log('Kick');
-  changeHP(20, character);
-  changeHP(20, enemy);
+  changeHP(random(20), character);
+  changeHP((20), enemy);
 })
 
 function init() {
@@ -40,8 +40,17 @@ function renderProgressBar(person) {
 }
 
 function changeHP(count, person) {
-  person.damageHP -= count;
+  if (person.damageHP < count) {
+    person.damageHP = 0;
+    $btn.disabled = true;
+  } else {
+    person.damageHP -= count;
+  }
   renderHP(person);
+}
+
+function random(num) {
+  return Math.ceil(Math.random() * num);
 }
 
 init();
