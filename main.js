@@ -19,7 +19,7 @@ $btn.addEventListener('click', function() {
 
 function init() {
   console.log('Start game');
-  renderHPLife();
+  renderHPLife(character);
 }
 
 function renderHPLife(person) {
