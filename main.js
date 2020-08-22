@@ -3,7 +3,8 @@ const $btn = document.getElementById('btn-kick');
 const character = {
   name: 'Pikachu',
   defaultHP: 100,
-  damageHP: 100,
+  damageHP: 60,
+  elHP: document.getElementById('health-character'),
 }
 
 const enemy = {
@@ -21,7 +22,6 @@ function init() {
   renderHPLife();
 }
 
-function renderHPLife() {
-  const $character = document.getElementById('health-character');
-  console.log($character.innerText);
+function renderHPLife(person) {
+  person.elHP.innerText = character.damageHP + ' / ' + character.defaultHP;
 }
